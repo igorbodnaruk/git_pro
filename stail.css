@@ -1,0 +1,129 @@
+body {
+	font-family: Arial, sans-serif;
+	text-align: center;
+	margin-top: 50px;
+}
+.wrapper {
+	margin: 0 auto;
+	max-width: 900px;
+	background-color: rgb(211, 180, 210);
+}
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.blok {
+	margin: 10px;
+	box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.076),
+		6.7px 6.7px 5.3px rgba(0, 0, 0, 0.109),
+		12.5px 12.5px 10px rgba(0, 0, 0, 0.135),
+		22.3px 22.3px 17.9px rgba(0, 0, 0, 0.161),
+		41.8px 41.8px 33.4px rgba(0, 0, 0, 0.194),
+		100px 100px 80px rgba(0, 0, 0, 0.27);
+	border-radius: 10px;
+}
+/*--------------список справ---------------------*/
+
+.blok_01 {
+	background-color: blue;
+}
+#tasks {
+	margin-top: 20px;
+}
+.task-item {
+	margin-bottom: 10px;
+}
+.completed {
+	text-decoration: line-through;
+}
+
+/*---------------------таймер---------------------- */
+.blok_02 {
+	background-color: chartreuse;
+}
+#timer {
+	font-size: 2rem;
+	margin-bottom: 20px;
+}
+#controls {
+	display: flex;
+	justify-content: center;
+}
+button {
+	padding: 15px 25px;
+	border: unset;
+	border-radius: 15px;
+	color: #212121;
+	z-index: 1;
+	background: #e8e8e8;
+	position: relative;
+	font-weight: 1000;
+	font-size: 17px;
+	-webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+	box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+	transition: all 250ms;
+	overflow: hidden;
+}
+
+button::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 0;
+	border-radius: 15px;
+	background-color: #212121;
+	z-index: -1;
+	-webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+	box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+	transition: all 250ms;
+}
+
+button:hover {
+	color: #e8e8e8;
+}
+
+button:hover::before {
+	width: 100%;
+}
+
+/*------------------- КАЛЬКУЛЯТОР------- */
+.blok_03 {
+	background-color: darkolivegreen;
+}
+.calculator {
+	display: inline-block;
+	border: 1px solid #ccc;
+	padding: 10px;
+}
+input[type='button'] {
+	width: 40px;
+	height: 40px;
+	font-size: 1.2rem;
+	margin: 5px;
+	cursor: pointer;
+}
+input[type='text'] {
+	width: 180px;
+	height: 40px;
+	font-size: 1.2rem;
+	text-align: right;
+	margin-bottom: 10px;
+}
+/*-------------- КОНТЕКСТНЕ МІНЮ -------------*/
+.blok_04 {
+	background-color: rgb(204, 50, 158);
+}
+.context-menu {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	z-index: 1000;
+}
+.context-menu-item {
+	padding: 8px 16px;
+	cursor: pointer;
+}

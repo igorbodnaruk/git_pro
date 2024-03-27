@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="stail.css" />
+		<title>калькулятор/таймер/контекстне меню</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="container">
+				<div class="blok_01 blok">
+					<h2>Список справ</h2>
+					<input
+						type="text"
+						id="task-input"
+						placeholder="Добавить новую задачу"
+					/>
+					<button onclick="addTask()">Добавить</button>
+					<div id="tasks">
+						<!-- Список задач будет отображаться здесь -->
+					</div>
+				</div>
+				<div class="blok_02 blok">
+					<h2>Простой таймер</h2>
+					<div id="timer">00:00:00</div>
+					<div id="controls">
+						<button onclick="startTimer()">Старт</button>
+						<button onclick="pauseTimer()">Пауза</button>
+						<button onclick="resetTimer()">Сброс</button>
+					</div>
+				</div>
+				<div class="blok_03 blok">
+					<h2>Калькулятор</h2>
+					<div class="calculator">
+						<input type="text" id="display" readonly />
+						<br />
+						<input type="button" value="7" onclick="appendToDisplay('7')" />
+						<input type="button" value="8" onclick="appendToDisplay('8')" />
+						<input type="button" value="9" onclick="appendToDisplay('9')" />
+						<input type="button" value="/" onclick="appendToDisplay('/')" />
+						<br />
+						<input type="button" value="4" onclick="appendToDisplay('4')" />
+						<input type="button" value="5" onclick="appendToDisplay('5')" />
+						<input type="button" value="6" onclick="appendToDisplay('6')" />
+						<input type="button" value="*" onclick="appendToDisplay('*')" />
+						<br />
+						<input type="button" value="1" onclick="appendToDisplay('1')" />
+						<input type="button" value="2" onclick="appendToDisplay('2')" />
+						<input type="button" value="3" onclick="appendToDisplay('3')" />
+						<input type="button" value="-" onclick="appendToDisplay('-')" />
+						<br />
+						<input type="button" value="0" onclick="appendToDisplay('0')" />
+						<input type="button" value="." onclick="appendToDisplay('.')" />
+						<input type="button" value="=" onclick="calculate()" />
+						<input type="button" value="+" onclick="appendToDisplay('+')" />
+						<br />
+						<input type="button" value="C" onclick="clearDisplay()" />
+					</div>
+				</div>
+				<div class="blok_04 blok">
+					<h1>Контекстное меню</h1>
+					<div
+						id="target"
+						style="
+							width: 200px;
+							height: 200px;
+							background-color: lightblue;
+							position: relative;
+						"
+					>
+						Правый клик для открытия меню
+					</div>
+
+					<div id="context-menu" class="context-menu">
+						<div
+							class="context-menu-item"
+							onclick="menuItemClicked('Action 1')"
+						>
+							Действие 1
+						</div>
+						<div
+							class="context-menu-item"
+							onclick="menuItemClicked('Action 2')"
+						>
+							Действие 2
+						</div>
+						<div
+							class="context-menu-item"
+							onclick="menuItemClicked('Action 3')"
+						>
+							Действие 3
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
